@@ -36,16 +36,16 @@ const roles = [
   ["Varis Mafiya", "mafia", "Donun varisi", "crown", "Don ölərsə, onun yerinə keçir və mafiya qrupuna rəhbərlik etməyə başlayır."],
   ["Sadə Mafiya", "mafia", "Sadə üzv", "mask", "Mafiya qrupunun sadə üzvüdür. Gecə kimisə öldürmək üçün Don ilə birlikdə qərar verir."],
   ["Komissar", "city", "Şəhərin qoruyucusu", "star", "Şəhərin əsas qoruyucusudur. Gecə kiminsə kim olduğunu yoxlaya bilər. “Bu şəxs mafiyadır ya yox?” sualına cavab alır."],
-  ["Mag", "city", "Sehrbaz", "spark", "Sehrbazdır. Gecə kimisə bir dəfə dirildə bilər və ya bir dəfə qoruma tətbiq edə bilər."],
+  ["Varis Komissar", "city", "Komissarın varisi", "shield", "Komissar sağ olduqca dinc sakin kimi oynayır. Komissar oyundan çıxanda onun yerinə keçir və bütün bacarıqlarını alır."],
+  ["Skorpion", "neutral", "Ən güclü kart", "scorpion", "Oyunun ən güclü kartıdır. Gecə öldürülə bilmir, yalnız səsvermə ilə oyundan çıxır. Ona açılan hər atəşdən güllə yığır. Killer ona atəş açsa, 1 atış əvəzinə 2 atış edə bilir."],
+  ["Oğru", "neutral", "Bacarıq oğrusu", "mask", "Hər gecə gözünü açıb birini seçir. Seçdiyi kart aktivdirsə, onun bacarığını oğurlayır. Sadə mafiyadan başqa hamının bacarığını oğurlaya bilər. İkiüzlünü (Oboroten) seçsə, Oğru özü oyundan çıxır."],
+  ["Mag", "city", "Atəşin hökmü", "spark", "Gecə Killer və Skorpiondan başqa kim atəş açsa (Ninja, Manyak, Komissar, Kamikadze), vurulan adamın oyunda qalıb-qalmamasına Mag qərar verir."],
   ["İkiüzlü", "city", "Gizli məqsəd", "masks", "Gündüz özünü sivil kimi göstərsə də, oyunun axarını dəyişdirə biləcək gizli məqsədləri var. Sistemə görə ya mafiyaya, ya da şəhərə işləyir."],
   ["Ninja", "city", "Səssiz qatil", "shuriken", "Səssiz qatildir. Gecə birini öldürür, lakin izi çox çətin tapılır. Komissar onu yoxlayanda nəticə “sivil” kimi çıxır."],
-  ["Varis Komissar", "city", "Komissarın varisi", "shield", "Komissar sağ olduqca dinc sakin kimi oynayır. Komissar oyundan çıxanda onun yerinə keçir və bütün bacarıqlarını alır."],
   ["Mələk", "city", "Gecə qoruyucusu", "wings", "Hər gecə bir nəfəri qoruyur və həmin gecə onu öldürmək mümkün olmur. Eyni adamı iki gecə ardıcıl qoruya bilmir."],
-  ["Kamikadze", "neutral", "Öz ölümü bahasına", "bomb", "Özünü partlada bilər və bir nəfəri özü ilə apara bilər. Bu, öz ölümü bahasına olur."],
-  ["Manyak", "neutral", "Tək qatil", "skull", "Tək oynayan psixopatik obrazdır. Hər gecə istədiyi birini öldürür. Nə mafiyadır, nə də sivildir. Hər kəs üçün təhlükəlidir."],
-  ["Killer", "neutral", "Sərt qatil", "pistol", "Sərt qatil obrazıdır. Hər gecə bir nəfəri sakitcə öldürə bilər. Manyakdan fərqli olaraq daha sistemli işləyir."],
-  ["Skorpion", "neutral", "Yalnız səsvermə ilə", "scorpion", "Hər gecə 1 gülləsi var. Gecə kimsə ona silah açarsa, 2 gülləsi olur. 2 silah açılarsa, 3 gülləsi olur. Onu yalnız səsvermə ilə oyundan çıxarmaq mümkündür."],
-  ["Oğru", "neutral", "Rol oğrusu", "mask", "Oğrudur. Gecə birini izləyə bilər və onun rolunu oğurlaya bilər və ya sadəcə kimliyini öyrənər."],
+  ["Kamikadze", "neutral", "Kamikadze gecəsi", "bomb", "Gecə gözünü açmır. İstədiyi vaxt “Kamikadze gecəsi” elan edib özünü partlada və özü ilə birini apara bilər. Səsvermə ilə çıxarılsa da, özü ilə birini aparır."],
+  ["Manyak", "neutral", "Killer kimi", "skull", "Killer kimi işləyir. Skorpiondan başqa hər kəsi oyundan çıxara bilir. Skorpiona atəş açsa, Skorpion o gülləni yığır və 1 atış əvəzinə 2 atış edə bilir."],
+  ["Killer", "neutral", "Sərt qatil", "pistol", "Skorpiondan başqa hər kəsi oyundan çıxara bilir. Skorpiona atəş açsa, Skorpion o gülləni yığır və 1 atış əvəzinə 2 atış edə bilir."],
 ];
 
 const corners =
