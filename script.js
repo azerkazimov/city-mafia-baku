@@ -37,15 +37,15 @@ const roles = [
   ["Sadə Mafiya", "mafia", "Sadə üzv", "mask", "Mafiya qrupunun sadə üzvüdür. Gecə kimisə öldürmək üçün Don ilə birlikdə qərar verir."],
   ["Komissar", "city", "Şəhərin qoruyucusu", "star", "Şəhərin əsas qoruyucusudur. Gecə kiminsə kim olduğunu yoxlaya bilər. “Bu şəxs mafiyadır ya yox?” sualına cavab alır."],
   ["Varis Komissar", "city", "Komissarın varisi", "shield", "Komissar sağ olduqca dinc sakin kimi oynayır. Komissar oyundan çıxanda onun yerinə keçir və bütün bacarıqlarını alır."],
-  ["Skorpion", "neutral", "Ən güclü kart", "scorpion", "Oyunun ən güclü kartıdır. Gecə öldürülə bilmir, yalnız səsvermə ilə oyundan çıxır. Ona açılan hər atəşdən güllə yığır. Killer ona atəş açsa, 1 atış əvəzinə 2 atış edə bilir."],
-  ["Oğru", "neutral", "Bacarıq oğrusu", "mask", "Hər gecə gözünü açıb birini seçir. Seçdiyi kart aktivdirsə, onun bacarığını oğurlayır. Sadə mafiyadan başqa hamının bacarığını oğurlaya bilər. İkiüzlünü (Oboroten) seçsə, Oğru özü oyundan çıxır."],
-  ["Mag", "city", "Atəşin hökmü", "spark", "Gecə Killer və Skorpiondan başqa kim atəş açsa (Ninja, Manyak, Komissar, Kamikadze), vurulan adamın oyunda qalıb-qalmamasına Mag qərar verir."],
+  ["Skorpion", "neutral", "Yalnız səsvermə ilə", "scorpion", "Oyunun ən güclü kartıdır. Gecə öldürülə bilmir, yalnız səsvermə ilə oyundan çıxır. Hər gecə 1 gülləsi var və ona açılan hər atəşdən güllə yığır: kimsə ona silah açarsa 2 gülləsi, iki dəfə açılarsa 3 gülləsi olur. Killer ona atəş açsa, 1 atış əvəzinə 2 atış edə bilir."],
+  ["Oğru", "neutral", "Rol oğrusu", "mask", "Oğrudur. Hər gecə gözünü açıb birini seçir və onu izləyə bilər. Seçdiyi kart aktivdirsə, onun bacarığını oğurlayır və ya sadəcə kimliyini öyrənir. Sadə mafiyadan başqa hamının bacarığını oğurlaya bilər. İkiüzlünü (Oboroten) seçsə, Oğru özü oyundan çıxır."],
+  ["Mag", "city", "Sehrbaz", "spark", "Sehrbazdır. Gecə kimisə bir dəfə dirildə bilər və ya bir dəfə qoruma tətbiq edə bilər. Killer və Skorpiondan başqa kim atəş açsa (Ninja, Manyak, Komissar, Kamikadze), vurulan adamın oyunda qalıb-qalmamasına da Mag qərar verir."],
   ["İkiüzlü", "city", "Gizli məqsəd", "masks", "Gündüz özünü sivil kimi göstərsə də, oyunun axarını dəyişdirə biləcək gizli məqsədləri var. Sistemə görə ya mafiyaya, ya da şəhərə işləyir."],
   ["Ninja", "city", "Səssiz qatil", "shuriken", "Səssiz qatildir. Gecə birini öldürür, lakin izi çox çətin tapılır. Komissar onu yoxlayanda nəticə “sivil” kimi çıxır."],
   ["Mələk", "city", "Gecə qoruyucusu", "wings", "Hər gecə bir nəfəri qoruyur və həmin gecə onu öldürmək mümkün olmur. Eyni adamı iki gecə ardıcıl qoruya bilmir."],
-  ["Kamikadze", "neutral", "Kamikadze gecəsi", "bomb", "Gecə gözünü açmır. İstədiyi vaxt “Kamikadze gecəsi” elan edib özünü partlada və özü ilə birini apara bilər. Səsvermə ilə çıxarılsa da, özü ilə birini aparır."],
-  ["Manyak", "neutral", "Killer kimi", "skull", "Killer kimi işləyir. Skorpiondan başqa hər kəsi oyundan çıxara bilir. Skorpiona atəş açsa, Skorpion o gülləni yığır və 1 atış əvəzinə 2 atış edə bilir."],
-  ["Killer", "neutral", "Sərt qatil", "pistol", "Skorpiondan başqa hər kəsi oyundan çıxara bilir. Skorpiona atəş açsa, Skorpion o gülləni yığır və 1 atış əvəzinə 2 atış edə bilir."],
+  ["Kamikadze", "neutral", "Öz ölümü bahasına", "bomb", "Özünü partlada və bir nəfəri özü ilə apara bilər, amma bu öz ölümü bahasına olur. Gecə gözünü açmır. İstədiyi vaxt “Kamikadze gecəsi” elan edib özünü partladır. Səsvermə ilə çıxarılsa da, özü ilə birini aparır."],
+  ["Manyak", "neutral", "Tək qatil", "skull", "Tək oynayan psixopatik obrazdır. Nə mafiyadır, nə də sivildir və hər kəs üçün təhlükəlidir. Killer kimi işləyir: Skorpiondan başqa hər kəsi oyundan çıxara bilir, Skorpiona atəş açsa, Skorpion o gülləni yığır və 1 atış əvəzinə 2 atış edə bilir. Vurduğu adamın taleyinə Mag qərar verir."],
+  ["Killer", "neutral", "Sərt qatil", "pistol", "Sərt qatil obrazıdır. Hər gecə bir nəfəri sakitcə öldürə bilər və Manyakdan fərqli olaraq daha sistemli işləyir. Skorpiondan başqa hər kəsi oyundan çıxara bilir. Skorpiona atəş açsa, Skorpion o gülləni yığır və 1 atış əvəzinə 2 atış edə bilir. Mag onun atəşinə təsir edə bilmir."],
 ];
 
 const corners =
